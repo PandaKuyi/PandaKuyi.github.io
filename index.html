@@ -6,7 +6,7 @@
     <style>
         #clock {
             position: absolute;
-            left: 240px;
+            left: 260px;
             top: 963px;
             width: 400px;
             font-size: 60px;
@@ -127,6 +127,8 @@
         var hour = time.getHours(); //获得小时、分钟、秒
         var minute = time.getMinutes();
         var second = time.getSeconds();
+        if (hour < 10) //如果分钟只有1位，补0显示
+            hour = "0" + hour;
         if (month < 10) //如果分钟只有1位，补0显示
             month = "0" + month;
         if (minute < 10) //如果分钟只有1位，补0显示
