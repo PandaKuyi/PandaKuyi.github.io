@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>天腐贱康通</title>
+    <title>Fucking NCR</title>
     <style>
         #clock {
             position: absolute;
@@ -13,8 +13,7 @@
             font-weight: 650;
             color: #1f6ae1;
             background-color: rgba(0, 0, 0, 0);
-            font-family: "Arial", "PingFangSC-Medium", "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
-            font-style: normal;
+            font-family: "PingFangSC-Medium", "Arial","Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
         }
 
         /*
@@ -29,8 +28,7 @@
             font-size: 30px;
             font-weight: 600;
             background-color: rgba(0, 0, 0, 0);
-            font-family: "Arial", "PingFangSC-Medium", "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
-            font-style: normal;
+            font-family: "PingFangSC-Medium", "Arial","Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
         }
 
         #second {
@@ -42,8 +40,7 @@
             font-weight: 600;
             color: #3f59e4;
             background-color: rgba(0, 0, 0, 0);
-            font-family: "Arial", "PingFangSC-Medium", "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
-            font-style: normal;
+            font-family: "PingFangSC-Medium", "Arial","Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
         }
 
         #date {
@@ -55,8 +52,7 @@
             font-weight: 600;
             color: #1f6ae1;
             background-color: rgba(0, 0, 0, 0);
-            font-family: "Arial", "PingFangSC-Medium", "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
-            font-style: normal;
+            font-family: "PingFangSC-Medium", "Arial","Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
         }
 
         #day {
@@ -69,21 +65,7 @@
             color: #f7ffff;
             background-color: rgba(0, 0, 0, 0);
             font-style: normal;
-            font-family: "Arial", "PingFangSC-Medium", "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
-            
-        }
-        
-        #tripday {
-            position: absolute;
-            left: 575px;
-            top: 1973px;
-            width: 400px;
-            font-size: 27px;
-            font-weight: 410;
-            color: #f7ffff;
-            background-color: rgba(0, 0, 0, 0);
-            font-style: normal;
-            font-family: "Arial", "PingFangSC-Medium", "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
+            font-family: "PingFangSC-Medium", "Arial","Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
             
         }
 
@@ -102,78 +84,36 @@
             height: 100%;
         }
         
-        #clk60 {
-            position: absolute;
-            left: 237px;
-            top: 2032px;
-            width: 450px;
-            font-size: 32px;
-            font-weight: 410;
-            color: #83d9bc;
-            background-color: rgba(0, 0, 0, 0);
-            font-style: normal;
-            font-family: "Arial", "PingFangSC-Medium", "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "sans-serif"; 
-            
-         @font-face {
-            font-family: Arial;
-            src: local(Arial),    /* 指定使用者電腦中的 Gentium 字型 */
-            url(./fonts/Arial/Arial.ttf)format("truetype");
-        }
-            
          @font-face {
             font-family: PingFangSC-Medium;
             src: local(PingFangSC-Medium),    /* 指定使用者電腦中的 Gentium 字型 */
             url(./fonts/PingFang SC/PingFangSC-Medium.woff2)format("truetype");
         }
 
-
+        @font-face {
+            font-family: Arial;
+            src: local(Arial),    /* 指定使用者電腦中的 Gentium 字型 */
+            url(./fonts/Arial/Arial.ttf)format("truetype");
+        }
         
     </style>
   
 
 </head>
 <body onLoad="main()">
-<img src="./SAMPLE5.png" width="1080" height="3500" alt=""/>
+<img src="./SAMPLE4.png" width="1080" height="3500" alt=""/>
 <span id="clock"></span>
 <!-- #time是上面狀態列的時間如果不用可以直接砍掉-->
 <span id="time"></span>
 <span id="second"></span>
 <span id="date"></span>
 <span id="day"></span>
-<span id="tripday"></span>
 <a id="link" href="P2.html">
     <!-- 這個div是用來撐開連結的-->
     <div id="link-div">
     </div>
 </a>
-    
-<div onclick="test()" style="cursor:pointer;" id="clk60">Click</div>
-<span id="#clk60"></span>
 <script type="text/javascript">
-
-    function main() {
-        disptime();
-        setInterval("disptime()", 1000);
-    }
-
-    var time = 60;
-    var timer;
-    function test() {
-        if(timer==undefined){
-            timer = setInterval(function () {
-                time--;
-                document.querySelector("#clk60").innerHTML ="Click (" + time + ")";
-                if (time == 0) {
-                    time = 60;
-                    clearInterval(timer);
-                    timer = null;
-                }
-
-            }, 1000);
-        }
-    }
-    
-
     function main() {
         disptime();
         setInterval("disptime()", 1000);
@@ -201,9 +141,7 @@
         document.getElementById('time').innerHTML = hour + ":" + minute;
         document.getElementById('date').innerHTML = year + "-" + month + "-" + date;
         document.getElementById('day').innerHTML = month + "/" + date;
-        document.getElementById('tripday').innerHTML = month + "/" + date + " " + hour + "时";
     }
-    
 </script>
 </body>
 </html>
